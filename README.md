@@ -25,8 +25,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Repository](https://github.com/Sarkastherin/stats-preview-card-componentt.git)
-- Live Site URL: [Live demo](https://sarkastherin.github.io/stats-preview-card-componentt/)
+- Solution URL: [Repository](https://github.com/Sarkastherin/stats-preview-card-component.git)
+- Live Site URL: [Live demo](https://sarkastherin.github.io/stats-preview-card-component/)
 
 ## Author
 - Frontend Mentor - [@Sarkastherin](https://www.frontendmentor.io/profile/Sarkastherin)
