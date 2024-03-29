@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend+Deca:wght@100..900&display=swap');
+/* - Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 700
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400 */
+
+:root {
+  --very-dar-blue: hsl(233, 47%, 7%);
+  --dark-desaturated-blue: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+  --slightly-transparent-white-headings: hsla(0, 0%, 100%, 0.6);
+  --x-font: calc(27px + (35 - 27) * ((100vw - 320px) / (1440 - 320)));
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 100vh;
+  font-size: 15px;
+  background-color: var(--very-dar-blue);
+  color: var(--slightly-transparent-white);
+}
+
+.card {
+  width: 320px;
+  background-color: var(--dark-desaturated-blue);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 30px 0;
+}
+
+.card-img {
+  background-image: url(./images/image-header-mobile.jpg);
+  width: 100%;
+  height: 230px;
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+}
+
+.card-img::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: hsl(277, 64%, 51%, 0.45);
+  width: 100%;
+  height: 230px;
+  content: '';
+}
+
+.card-body {
+  padding: 30px;
+  text-align: center;
+}
+
+.title {
+  color: var(--white);
+  font-size: var(--x-font);
+}
+
+.title span {
+  color: var(--soft-violet);
+}
+
+.descripction {
+  margin: 20px 0 30px;
+  line-height: 25px;
+  font-weight: 300;
+}
+
+.statistics {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.figure-statistics {
+  color: var(--white);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.descripction-statistics {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 90%;
+    display: flex;
+    max-width: 1100px;
+  }
+
+  .card-img {
+    background-image: url(./images/image-header-desktop.jpg);
+    width: 50%;
+    height: auto;
+    order: 2;
+  }
+
+  .card-img::after {
+    height: 500px;
+    content: '';
+  }
+
+  .descripction {
+    margin-bottom: 60px;
+  }
+
+  .card-body {
+    text-align: start;
+    width: 50%;
+    padding: 2.5rem;
+  }
+
+  .statistics {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: fit-content
+  }
+
+  .descripction-statistics {
+    letter-spacing: 1.5px;
+    font-size: 0.5rem !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-body {
+    padding: 4rem;
+  }
+}
